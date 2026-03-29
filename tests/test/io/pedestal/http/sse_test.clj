@@ -12,7 +12,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.sse-test
-  (:require [io.pedestal.http.http-kit :as hk]
+  (:require matcher-combinators.test
+            [io.pedestal.http.http-kit :as hk]
             [io.pedestal.http.jetty :as jetty]
             [io.pedestal.interceptor.chain :as chain]
             [io.pedestal.interceptor :as interceptor]

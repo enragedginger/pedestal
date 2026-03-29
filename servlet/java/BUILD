@@ -1,0 +1,11 @@
+java_sources(
+    name="java",
+    resolve="pedestal",
+    sources=["**/*.java"],
+    dependencies=[
+        "//3rdparty/jvm:clojure",
+        "//3rdparty/jvm:jakarta-servlet-api",
+        "//3rdparty/jvm:jakarta-websocket-api",
+        "//3rdparty/jvm:jakarta-websocket-client-api",
+    ],
+)

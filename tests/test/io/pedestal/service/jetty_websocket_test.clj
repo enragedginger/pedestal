@@ -11,7 +11,8 @@
 
 (ns io.pedestal.service.jetty-websocket-test
   "Tests Jetty specifically, but nearly all the code is based on Servlet API and should work on others."
-  (:require [clojure.string :as string]
+  (:require matcher-combinators.test
+            [clojure.string :as string]
             [clojure.test :refer [deftest is use-fixtures]]
             [clojure.core.async :refer [put!]]
             io.pedestal.http.jetty

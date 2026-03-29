@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.metrics.otel-test
-  (:require [io.pedestal.internal :as i]
+  (:require matcher-combinators.test
+            [io.pedestal.internal :as i]
             [io.pedestal.metrics :as metrics]
             [io.pedestal.metrics.spi :as spi]
             [matcher-combinators.matchers :as m]

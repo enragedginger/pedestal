@@ -12,7 +12,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.body-params-test
-  (:require [clojure.instant :as inst]
+  (:require matcher-combinators.test
+            [clojure.instant :as inst]
             [io.pedestal.http.body-params :refer [body-params default-parser-map]]
             [clojure.test :refer [deftest is]]
             [matcher-combinators.matchers :as m])

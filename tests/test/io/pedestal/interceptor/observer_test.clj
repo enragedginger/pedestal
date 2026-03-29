@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.interceptor.observer-test
-  (:require [clojure.edn :as edn]
+  (:require matcher-combinators.test
+            [clojure.edn :as edn]
             [clojure.test :refer [deftest is use-fixtures]]
             [io.pedestal.interceptor.chain :as chain]
             [io.pedestal.interceptor.chain.debug :as debug]

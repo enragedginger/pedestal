@@ -13,7 +13,8 @@
 
 (ns ^{:doc "Integration tests of request handling."}
   io.pedestal.http.request-handling-test
-  (:require [ring.util.response :as ring-response]
+  (:require matcher-combinators.test
+            [ring.util.response :as ring-response]
             [clojure.test :refer [deftest is are]]
             [io.pedestal.test :refer [response-for]]
             [io.pedestal.http :as service])

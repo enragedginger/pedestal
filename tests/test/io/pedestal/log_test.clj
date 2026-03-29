@@ -11,7 +11,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.log-test
-  (:require [clojure.string :as string]
+  (:require matcher-combinators.test
+            [clojure.string :as string]
             [clojure.test :refer [deftest is use-fixtures]]
             [charred.api :as json]
             [io.pedestal.log :as log]

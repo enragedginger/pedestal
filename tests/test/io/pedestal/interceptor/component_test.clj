@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.interceptor.component-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is]]
             [io.pedestal.interceptor :refer [interceptor definterceptor]]
             [com.stuartsierra.component :as component]
             [io.pedestal.interceptor.chain :as chain]

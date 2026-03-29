@@ -30,6 +30,8 @@ tmp/
 .clj-kondo/*
 **/.clj-kondo/.cache
 !.clj-kondo/config.edn
+!.clj-kondo/hooks
+!.clj-kondo/hooks/**
 .cpcache/
 
 # Editors (IntelliJ / Eclipse)
@@ -51,3 +53,7 @@ autodoc/
 codox
 **/.lsp
 */.clj-kondo
+
+# Pants build tool
+.pants.d/
+dist/

@@ -11,7 +11,8 @@
 
 (ns io.pedestal.service.hk-connector-test
   "Tests when running Http-Kit using io.pedestal.connector.test/response-for (rather than HTTP)."
-  (:require [charred.api :as json]
+  (:require matcher-combinators.test
+            [charred.api :as json]
             [clojure.edn :as edn]
             [clojure.test :refer [deftest is use-fixtures]]
             [clojure.core.async :refer [go]]

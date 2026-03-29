@@ -16,7 +16,8 @@
 ;; https://github.com/ring-clojure/ring/blob/master/ring-jetty-adapter/test/ring/adapter/test/jetty.clj
 
 (ns io.pedestal.http.jetty-test
-  (:require [clojure.test :refer [deftest is testing use-fixtures]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is testing use-fixtures]]
             [clojure.edn :as edn]
             [io.pedestal.http :as bootstrap]
             [clj-http.client :as http]

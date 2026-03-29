@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.service.resources-test
-  (:require [clojure.java.io :as io]
+  (:require matcher-combinators.test
+            [clojure.java.io :as io]
             [clojure.test :refer [deftest is testing]]
             [io.pedestal.http :as http]
             [io.pedestal.test :as test]

@@ -11,7 +11,8 @@
 
 (ns io.pedestal.interceptor.terminator-test
   "Tests for chain termination logic."
-  (:require [clojure.test :refer [deftest is]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is]]
             [io.pedestal.http.response :as response :refer [respond-with]]
             [io.pedestal.interceptor :refer [interceptor]]
             [io.pedestal.interceptor.chain :as chain]

@@ -12,7 +12,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.ring-middlewares-test
-  (:require [io.pedestal.http.ring-middlewares :as m]
+  (:require matcher-combinators.test
+            [io.pedestal.http.ring-middlewares :as m]
             [io.pedestal.interceptor :as i :refer [valid-interceptor?]]
             [ring.middleware.session.memory :as memory]
             [io.pedestal.interceptor.chain :as chain]

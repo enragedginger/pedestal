@@ -11,7 +11,8 @@
 
 (ns io.pedestal.service.hk-http-test
   "Test Http-Kit connector using HTTP requests (to fully exercise async code paths)."
-  (:require [charred.api :as json]
+  (:require matcher-combinators.test
+            [charred.api :as json]
             [io.pedestal.http.http-kit :as http-kit]
             [clojure.test :refer [deftest is use-fixtures]]
             [io.pedestal.http.response :as response]

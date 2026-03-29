@@ -11,7 +11,8 @@
 
 (ns io.pedestal.service.jetty-connector-test
   "Tests when running Jetty as a connector, using test-request."
-  (:require [clojure.edn :as edn]
+  (:require matcher-combinators.test
+            [clojure.edn :as edn]
             [clojure.test :refer [deftest is use-fixtures]]
             [clojure.core.async :refer [go]]
             [io.pedestal.http.response :as response]

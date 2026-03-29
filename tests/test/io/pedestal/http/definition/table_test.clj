@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.definition.table-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is]]
             [io.pedestal.http.route.definition.table :refer [table-routes]])
   (:import (java.lang AssertionError)))
 

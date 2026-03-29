@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.interceptor.path-params-decoder-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is]]
             matcher-combinators.clj-test
             [io.pedestal.http.route :refer [path-params-decoder]]))
 

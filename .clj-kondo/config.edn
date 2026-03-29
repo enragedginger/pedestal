@@ -9,7 +9,33 @@
 ;
 ; You must not remove this notice, or any other, from this software.
 
-{:config-paths ["../error/resources/clj-kondo.exports/io.pedestal/pedestal.error"
-                "../log/resources/clj-kondo.exports/io.pedestal/pedestal.log"
-                "../interceptor/resources/clj-kondo.exports/io.pedestal/pedestal.interceptor"
-                "../route/resources/clj-kondo.exports/io.pedestal/pedestal.route"]}
+{;; Hook files are copied into .clj-kondo/hooks/ from module export configs so that
+ ;; both direct clj-kondo invocations and Pants sandboxed linting share the same hooks.
+ ;; Source of truth: */resources/clj-kondo.exports/io.pedestal/*/
+
+ ;; lint-as rules: from interceptor and build.clj inline config
+ :lint-as {io.pedestal.interceptor/definterceptor       clojure.core/defrecord
+           io.pedestal.http.route-test/defhandler        clojure.core/defn
+           io.pedestal.http.route-test/defon-request     clojure.core/defn}
+
+ ;; hooks: consolidated from error, log, and route module exports
+ :hooks {:analyze-call
+         {;; error module: error-dispatch macro
+          io.pedestal.interceptor.error/error-dispatch
+          hooks.io.pedestal.interceptor.error/error-dispatch
+          ;; log module: structured logging macros
+          io.pedestal.log/trace hooks.io.pedestal.log/log-expr
+          io.pedestal.log/debug hooks.io.pedestal.log/log-expr
+          io.pedestal.log/info  hooks.io.pedestal.log/log-expr
+          io.pedestal.log/warn  hooks.io.pedestal.log/log-expr
+          io.pedestal.log/error hooks.io.pedestal.log/log-expr
+          ;; route module: sawtooth path splitting macro
+          io.pedestal.http.route.sawtooth.impl/with-split-path
+          hooks.io.pedestal.http.route.sawtooth.impl/with-split-path}}
+
+ ;; Linter settings: from build.clj inline config
+ :linters {:unresolved-symbol        {:exclude [(clojure.test/is [match?])]}
+           :deprecated-var           {:level :off}
+           :deprecated-namespace     {:level :off}
+           :single-key-in            {:level :error}
+           :used-underscore-binding  {:level :error}}}

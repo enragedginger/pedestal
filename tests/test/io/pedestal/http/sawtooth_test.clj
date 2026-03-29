@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.sawtooth-test
-  (:require [clojure.set :as set]
+  (:require matcher-combinators.test
+            [clojure.set :as set]
             [clojure.string :as string]
             [clojure.test :refer [deftest is use-fixtures]]
             [io.pedestal.http.route :as route]

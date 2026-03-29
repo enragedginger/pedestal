@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.service.hk-websocket-test
-  (:require [clojure.string :as string]
+  (:require matcher-combinators.test
+            [clojure.string :as string]
             [clojure.test :refer [deftest is use-fixtures]]
             [clojure.core.async :refer [go put! >!! close! chan]]
             io.pedestal.http.http-kit

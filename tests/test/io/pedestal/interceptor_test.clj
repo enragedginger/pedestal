@@ -12,7 +12,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.interceptor-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is testing]]
             [io.pedestal.internal :as i]
             [clojure.core.async :as async
              :refer [<! >! go chan timeout <!! put!]]

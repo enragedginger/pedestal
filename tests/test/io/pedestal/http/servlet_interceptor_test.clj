@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.servlet-interceptor-test
-  (:require [clj-commons.format.exceptions :as exceptions]
+  (:require matcher-combinators.test
+            [clj-commons.format.exceptions :as exceptions]
             [io.pedestal.http.impl.servlet-interceptor :as si]
             [clojure.test :refer [deftest is]]
             [clojure.string :as string]

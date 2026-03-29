@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.connector.dev-mode-test
-  (:require [clojure.string :as string]
+  (:require matcher-combinators.test
+            [clojure.string :as string]
             [clojure.test :refer [deftest is use-fixtures]]
             [io.pedestal.http.http-kit :as hk]
             [io.pedestal.http.route.definition.table :as table]

@@ -12,7 +12,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.route-test
-  (:require [clojure.test :refer [deftest is use-fixtures are testing]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is use-fixtures are testing]]
             [clojure.set :as set]
             [clojure.pprint :refer [pprint]]
             [clojure.spec.test.alpha :as stest]

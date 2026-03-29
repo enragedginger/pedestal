@@ -10,7 +10,8 @@
 ; You must not remove this notice, or any other, from this software.
 
 (ns io.pedestal.http.tracing-test
-  (:require [clojure.test :refer [deftest is use-fixtures]]
+  (:require matcher-combinators.test
+            [clojure.test :refer [deftest is use-fixtures]]
             [mockfn.macros :refer [verifying]]
             [mockfn.matchers :refer [exactly any]]
             [io.pedestal.tracing :as t]
